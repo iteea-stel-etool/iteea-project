@@ -2,9 +2,16 @@
 import { h } from 'preact'
 import { render } from '@testing-library/preact'
 
-import App from '../src/index'
+import HelloWorld from '../src/components/HelloWorld'
 
-test('Hello Jest', () => {
-  const { container } = render(<App />)
-  expect(container.textContent).toEqual('Hello Preact!!!')
+describe('Hello Jest', () => {
+  test('Hello Preact', () => {
+    const { container } = render(<HelloWorld />)
+    expect(container.textContent).toEqual('Hello Preact!!!')
+  })
+
+  test('Hello Jest Snapshot', () => {
+    const tree = render(<HelloWorld />)
+    expect(tree).toMatchSnapshot()
+  })
 })

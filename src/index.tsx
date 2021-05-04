@@ -1,13 +1,10 @@
 // Project Root
 import { h, render } from 'preact'
 
-export default function App() {
-  return (
-    <div>Hello Preact!!!</div>
-  )
-}
+// Import Hello World Component
+import HelloWorld from './components/HelloWorld'
 
 const root = document.getElementById('app')
-if(root != null) {
-  render(<App />, root)
+if (root != null) {
+  render(<HelloWorld />, root)
 }
