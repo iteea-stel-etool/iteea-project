@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack serve --mode=development",
     "build": "rimraf ./dist && webpack build --mode=production",
-    "test": "jest"
+    "test": "jest",
+    "update-jest": "jest --updateSnapshot"
   },
   "keywords": [
     "Preact",
@@ -16,6 +17,11 @@
   ],
   "author": "Robbie McClellan",
   "license": "ISC",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
   "dependencies": {
     "preact": "^10.5.13"
   },
@@ -32,6 +38,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "html-webpack-plugin": "^5.3.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.6.0",
     "postcss-loader": "^5.2.0",

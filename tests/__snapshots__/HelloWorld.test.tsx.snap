@@ -5,13 +5,17 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="text"
+      >
         Hello Preact!!!
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
+    <div
+      class="text"
+    >
       Hello Preact!!!
     </div>
   </div>,
