@@ -1,15 +1,24 @@
 // Project Root
-import { h, render } from 'preact'
+import { h, Fragment, render } from 'preact'
 import { Router, Route } from 'preact-router'
 
-// Import Hello World Component
+// Import Components
+import Navigation from './components/Navigation'
 import HelloWorld from './components/HelloWorld'
+
+const home = () => <div>Home Route</div>
+const about = () => <div>About Route</div>
 
 function Root() {
   return (
-    <Router>
-      <Route path='/' component={HelloWorld} />
-    </Router>
+    <Fragment>
+      <Navigation />
+      <Router>
+        <Route path='/hello' component={HelloWorld} />
+        <Route path='/about' component={about} />
+        <Route path='/' component={home} />
+      </Router>
+    </Fragment>
   )
 }
 
