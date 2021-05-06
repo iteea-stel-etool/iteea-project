@@ -50,5 +50,6 @@ export const module = {
 export const devServer = {
   host: 'localhost',
   port: 4000,
+  historyApiFallback: true,
   contentBase: join(__dirname, 'src')
 }
