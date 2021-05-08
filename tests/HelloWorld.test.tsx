@@ -2,7 +2,7 @@
 import { h } from 'preact'
 import { render } from '@testing-library/preact'
 
-import HelloWorld from '../src/components/HelloWorld'
+import HelloWorld from '../src/components/HelloWorld/HelloWorld'
 
 describe('Hello Jest', () => {
   test('Hello Preact', () => {
