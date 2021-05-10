@@ -17,7 +17,7 @@ export const plugins = [
   new HtmlPlugin({
     title: 'Preact Configuration',
     template: join(__dirname, 'public/index.html'),
-    favicon: join(__dirname, 'public/favicon.ico')
+    favicon: join(__dirname, 'public/iteea.ico')
   }),
   new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' })
 ]
@@ -43,6 +43,10 @@ export const module = {
         },
         'postcss-loader'
       ]
+    },
+    {
+      test: /\.(png|jpg|gif|ico)$/i,
+      loader: 'url-loader'
     }
   ]
 }
