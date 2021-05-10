@@ -21,6 +21,7 @@
 
 .navLinks ul {
   display: flex;
+  background-color: white;
 }
 
 .navLinks ul a {

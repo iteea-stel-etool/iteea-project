@@ -16,11 +16,13 @@ function Root() {
   return (
     <main className={styles.wrapper}>
       <Navigation />
-      <Router>
-        <Route path='/hello' component={HelloWorld} />
-        <Route path='/about' component={about} />
-        <Route path='/' component={home} />
-      </Router>
+      <div className={styles.container}>
+        <Router>
+          <Route path='/hello' component={HelloWorld} />
+          <Route path='/about' component={about} />
+          <Route path='/' component={home} />
+        </Router>
+      </div>
     </main>
   )
 }
