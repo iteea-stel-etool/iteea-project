@@ -1,5 +1,5 @@
 // Project Root
-import { h, Fragment, render } from 'preact'
+import { h, render } from 'preact'
 import { Router, Route } from 'preact-router'
 
 // Import Root Styling
