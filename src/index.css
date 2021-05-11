@@ -7,13 +7,20 @@
   font-size: 16px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .wrapper {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .wrapper {
     width: 100%;
+    font-size: 24px;
   }
 
   .container {
     position: relative;
-    top: 60px;
+    top: 70px;
   }
 }
