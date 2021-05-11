@@ -19,7 +19,9 @@ export default function Navigation() {
         <img src={IteeaLogo} alt='Iteea Logo' />
         <p>ITEEA Stel eTool</p>
         <div
-          className={cx(styles.menu, { [styles.animateBtn]: display })}
+          className={cx(styles.menuButton, {
+            [styles.animateMenuButton]: display
+          })}
           onClick={menuButtonClick}
         >
           <span></span>
@@ -28,7 +30,9 @@ export default function Navigation() {
         </div>
       </div>
       <section
-        className={cx(styles.navLinks, { [styles.animateNav]: display })}
+        className={cx(styles.navSection, {
+          [styles.animateNavSection]: display
+        })}
       >
         <ul>
           <li onClick={menuButtonClick}>

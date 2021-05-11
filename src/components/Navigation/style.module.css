@@ -1,9 +1,8 @@
 /* Navigation Styling */
 .navigation {
-  overflow: hidden;
-  align-items: center;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   margin-bottom: 10px;
   border-bottom: 1px solid rgb(204, 203, 203);
 }
@@ -11,7 +10,6 @@
 .logo {
   display: flex;
   align-items: center;
-  box-sizing: border-box;
 }
 
 .logo img {
@@ -19,47 +17,45 @@
   padding: 0 10px;
 }
 
-.navLinks ul {
+.navSection ul {
   display: flex;
-  background-color: white;
+  background-color: #fff;
 }
 
-.navLinks ul a {
+.navSection ul li a {
   display: block;
   padding: 16px;
-  color: black;
   text-decoration: none;
+  color: #000;
 }
 
-.navLinks ul li a:hover {
+.navSection ul li a:hover {
   color: #fff;
   background-color: #aa273d;
 }
 
-.menu {
+.menuButton {
   display: none;
-  right: 10px;
-  position: absolute;
 }
 
-.menu span {
-  display: block;
-  width: 25px;
+.menuButton span {
   height: 4px;
-  background-color: #aa273d;
+  width: 25px;
+  display: block;
+  position: relative;
   margin: 5px;
   border-radius: 5px;
-  position: relative;
+  background-color: #aa273d;
   transition: 0.75s ease-in-out;
 }
 
 @media screen and (max-width: 800px) {
   .navigation {
+    height: 100%;
     width: 100%;
     display: block;
-    border: none;
     position: absolute;
-    height: 100%;
+    border: none;
   }
 
   .logo {
@@ -68,60 +64,53 @@
     border-bottom: 1px solid rgb(204, 203, 203);
   }
 
-  .menu {
+  .menuButton {
     display: block;
+    position: absolute;
+    right: 10px;
   }
 
-  .animateBtn :nth-child(1) {
+  .animateMenuButton :nth-child(1) {
     transform: rotate(45deg);
     transform-origin: left;
   }
 
-  .animateBtn :nth-child(2) {
+  .animateMenuButton :nth-child(2) {
     transform: translate(-8px);
     opacity: 0;
   }
 
-  .animateBtn :nth-child(3) {
+  .animateMenuButton :nth-child(3) {
     transform: rotate(-45deg);
     transform-origin: left;
   }
 
-  .navLinks {
+  .navSection {
     height: 100%;
-    background-color: white;
-    position: relative;
     display: flex;
-    z-index: 3;
+    position: relative;
     left: 100%;
+    z-index: 3;
     transition: 0.5s ease-in-out;
   }
 
-  .animateNav {
+  .animateNavSection {
     left: 0;
   }
 
-  .navLinks ul {
+  .navSection ul {
+    width: 100%;
     flex-direction: column;
     align-items: center;
+  }
+
+  .navSection ul li {
     width: 100%;
   }
 
-  .navLinks ul li {
-    width: 100%;
-  }
-
-  .navLinks.closed {
-    display: none;
-  }
-
-  .toggle {
-    display: block;
-  }
-
-  .navLinks ul a {
-    border-bottom: 1px solid rgb(204, 203, 203);
-    text-align: center;
+  .navSection ul li a {
     padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid rgb(204, 203, 203);
   }
 }
